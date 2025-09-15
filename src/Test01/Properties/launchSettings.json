@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Test01": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "GOOGLE_APPLICATION_CREDENTIALS": "../../../project202509-788b2147c910.json"
+      }
+    }
+  }
+}
