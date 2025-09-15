@@ -1,0 +1,32 @@
+﻿@model List<FunctionDef>
+<div id="functions-data" data-functions='@System.Text.Json.JsonSerializer.Serialize(Model)' style="display:none"></div>
+<div class="row">
+    <div class="col-3">
+        <ul class="list-group" id="functionList">
+            @for (int i = 0; i < Model.Count; i++)
+            {
+                <li class="list-group-item" data-idx="@i">@Model[i].name</li>
+            }
+        </ul>
+    </div>
+    <div class="col-9">
+        <form id="uploadForm" enctype="multipart/form-data">
+            <div class="mb-3">
+                <input type="file" id="fileInput" class="form-control" accept="image/*" />
+                <img id="previewImg" src="" style="max-width:200px;display:none;cursor:pointer;" />
+                <button type="submit" class="btn btn-primary">送出</button>
+            </div>
+            <div class="mb-3">
+                <label>Request JSON</label>
+                <textarea id="requestJson" class="bg-light p-2 border rounded form-control" rows="10" style="min-height:240px; font-family:monospace; white-space:pre; overflow-x:auto; resize:vertical;"></textarea>
+            </div>
+            <div class="mb-3">
+                <label>Response JSON <br/> <span id="responseTime"></span></label>
+                <textarea id="responseJson" class="bg-light p-2 border rounded form-control" rows="20" style="min-height:360px; font-family:monospace; white-space:pre; overflow-x:auto; resize:vertical;"></textarea>
+            </div>
+        </form>
+    </div>
+</div>
+@section Scripts {
+    <script src="~/js/Home/Index/index.js?@DateTime.Now.ToString("mmss")"></script>
+}
