@@ -245,6 +245,74 @@
     }
   },
   {
+    "name": "web_debate",
+    "preview": "/images/web/trump biden debate.jpg",
+    "request": {
+      "requests": [
+        {
+          "image": { "content": "" },
+          "features": [
+            {
+              "type": "WEB_DETECTION",
+              "maxResults": 3
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "name": "web_iphone17pro_orange",
+    "preview": "/images/web/iphone17pro orange.png",
+    "request": {
+      "requests": [
+        {
+          "image": { "content": "" },
+          "features": [
+            {
+              "type": "WEB_DETECTION",
+              "maxResults": 3
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "name": "object_livingroom",
+    "preview": "/images/object/livingroom.jpg",
+    "request": {
+      "requests": [
+        {
+          "image": { "content": "" },
+          "features": [
+            {
+              "type": "OBJECT_LOCALIZATION",
+              "maxResults": 3
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "name": "object_dogbike",
+    "preview": "/images/object/dogbike.png",
+    "request": {
+      "requests": [
+        {
+          "image": { "content": "" },
+          "features": [
+            {
+              "type": "OBJECT_LOCALIZATION",
+              "maxResults": 3
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
     "name": "All_Upload",
     "preview": "",
     "request": {
@@ -289,6 +357,10 @@
             },
             {
               "type": "CROP_HINTS",
+              "maxResults": 3
+            },
+            {
+              "type": "WEB_DETECTION",
               "maxResults": 3
             }
           ]
@@ -345,6 +417,10 @@
             },
             {
               "type": "CROP_HINTS",
+              "maxResults": 3
+            },
+            {
+              "type": "WEB_DETECTION",
               "maxResults": 3
             }
           ]
